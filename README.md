@@ -23,3 +23,6 @@ Reference: Jung, Gang Seob, Hoon Joo Myung, and Stephan Irle. "Artificial Neural
  -. python run.py
 
  -. mpirun -n 2 python run.py (#CPU=2)
+
+
+Please report any bug/commetns to jungg@ornl.gov or gs4phone@gmail.com
