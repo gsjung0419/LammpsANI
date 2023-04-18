@@ -12,7 +12,7 @@ Reference: Jung, Gang Seob, Hoon Joo Myung, and Stephan Irle. "Artificial Neural
 
 1. Requirements
 
- -. Install https://github.com/gsjung0419/LammpsTorch
+ -. Install https://github.com/gsjung0419/LMPTorch
  
  -. Install https://github.com/aiqm/torchani
  
