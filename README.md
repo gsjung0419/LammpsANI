@@ -1,6 +1,6 @@
 # LammpsANI
 
-Reference: Jung, Gang Seob, Hoon Joo Myung, and Stephan Irle. "Artificial Neural Network Potentials for Mechanics and Fracture Dynamics of Two-Dimensional Crystals." Machine Learning: Science and Technology (2023)
+Reference: Jung, Gang Seob, Hunjoo Myung, and Stephan Irle. "Artificial Neural Network Potentials for Mechanics and Fracture Dynamics of Two-Dimensional Crystals." Machine Learning: Science and Technology (2023)
 
 0. Intro
 
