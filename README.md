@@ -12,7 +12,7 @@ Reference: Gang Seob Jung, Hunjoo Myung, and Stephan Irle. "Artificial Neural Ne
 
 1. Requirements
 
- -. Install https://github.com/gsjung0419/LMPTorch (available soon)
+ -. Install https://github.com/gsjung0419/LMPTorch
  
  -. Install https://github.com/aiqm/torchani
  
