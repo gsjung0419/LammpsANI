@@ -1,3 +1,13 @@
+## Version matching
+
+Use the LammpsANI revision tested for the selected LAMMPS release. MOMT follows the same rule: choose the matching GS_MOMT branch/tag for that LAMMPS API. Do not mix versions without rebuilding and rerunning the CPU, MPI, and CUDA smoke tests.
+
+
+# Linux LammpsANI notes (2026-07-21)
+
+This checkout is used with LAMMPS 4 Jul 2026 in `/home/8gj/miniconda3/envs/torchtest`, TorchANI from the local editable source, and Intel MPI mpi4py 4.1.2. See [the installation record](../lmp_packages/installation.md) for compiler, DFTB+, activation-hook, and troubleshooting details. CPU, Intel MPI, and CUDA smoke tests pass with the current neighbor-list and atom-type compatibility fixes in `animpi.py`.
+
+
 # LMPANI
 
 Reference: Gang Seob Jung, Hunjoo Myung, and Stephan Irle. "Artificial Neural Network Potentials for Mechanics and Fracture Dynamics of Two-Dimensional Crystals." Machine Learning: Science and Technology (2023)
