@@ -59,7 +59,7 @@ def post_force_callback(lmp, v, m):
     nlocal = L.extract_global("nlocal", 0)
     nghost = L.extract_global("nghost", 0)
 
-    idx = L.find_pair_neighlist("zero", request=0)
+    idx = L.find_pair_neighlist("zero", reqid=0)
     mylist = L.numpy.get_neighlist(idx)
 
     nlocal = L.extract_global("nlocal")
@@ -80,7 +80,7 @@ def post_force_callback(lmp, v, m):
     lcoord=np.ndarray.tolist(x)    
 
     #atypes
-    ltype = np.ndarray.tolist(np.transpose(atype)[0])
+    ltype = np.asarray(atype).tolist()
 
     #cell - box
     box = L.extract_box()
