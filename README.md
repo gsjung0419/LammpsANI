@@ -28,16 +28,53 @@ Reference: Gang Seob Jung, Hunjoo Myung, and Stephan Irle. "Artificial Neural Ne
  
  -. MPI (MPICH or OPENMPI), with mpi4py
 
-2. Running 
+2. Install `PKG_LMPTORCH` in recent LAMMPS
+
+Clone LMPTorch and run its package installer against the selected LAMMPS
+source tree:
+
+```bash
+git clone ssh://git@ssh.github.com:443/gsjung0419/LMPTorch.git
+python3 LMPTorch/install_lammps_package.py /path/to/lammps
+```
+
+Open CMake GUI with `/path/to/lammps/cmake` as the source directory and a
+build directory inside the LAMMPS source tree. Enable at least:
+
+```text
+BUILD_MPI=ON
+BUILD_SHARED_LIBS=ON
+PKG_PYTHON=ON
+PKG_LMPTORCH=ON
+```
+
+`PKG_LMPTORCH` requires `PKG_PYTHON`. Configure and generate in CMake GUI,
+then build and install:
+
+```bash
+cmake --build /path/to/lammps/build --parallel 8
+cmake --install /path/to/lammps/build
+```
+
+Verify the resulting executable with `lmp -h`. The installed-package list
+must contain `LMPTORCH`, and the fix-style list must contain `python/torch`.
+LammpsANI uses the force callback on every timestep, so its input must use
+`nevery=1`:
+
+```lammps
+fix 2 all python/torch 1 post_force post_force_callback
+```
+
+3. Running
 
  -. python run.py
 
  -. mpirun -n 2 python run.py (#CPU=2)
 
 
-3. Current LAMMPS 2025 status
+4. Current LAMMPS status
 
-Current repository folder: `LMPANI`.
+Current repository folder: `LammpsANI`.
 
 This example was smoke-tested with the shared LAMMPS stack documented in:
 
